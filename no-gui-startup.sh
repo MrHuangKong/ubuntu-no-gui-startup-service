@@ -29,6 +29,7 @@ else
                 start)
                         # Start gui
                         sudo service lightdm start
+                        echo "GUI service started.."
                         ;;
                 stop)
                         # Stop GUI Service and Start TTY2 Terminal
