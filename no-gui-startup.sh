@@ -19,8 +19,8 @@ cat <<'EOF' > /tmp/no-gui.sh
 if [ -z "$1" ]; then
         # Default argument, Stop GUI Service and Start TTY2 Terminal
         sleep 3
-        sudo chvt 2
         sudo service lightdm stop
+        sudo chvt 1
         echo "GUI service stopped.."
         exit 1
 # Check what argument user sent
@@ -34,7 +34,7 @@ else
                 stop)
                         # Stop GUI Service and Start TTY2 Terminal
                         sleep 3
-                        sudo chvt 2
+                        sudo chvt 1
                         sudo service lightdm stop
                         echo "GUI service stopped.."
                         ;;
